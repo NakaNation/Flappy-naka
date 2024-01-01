@@ -1,0 +1,183 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-image: url("76YS.gif");
+    /* background-size: 500px 500px; */
+}
+
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .start-btn {
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background-color: #333;
+        color: #ddd;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+      position: absolute;
+      left: 60%;
+      top: 50%;
+      /* transform: translate(-50%, -50%); */
+      font-size: 16px;
+      z-index: 999; /* Ensures the button displays above the canvas */
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+  .next-btn {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #ddd;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .next-char-btn {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #ddd;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  #charGif{
+    width: 60%;
+    /* height: 100%; */
+    margin: 20px;
+  }
+
+  .change-char {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    background-color: #333; /* Dark background color */
+    color: #ddd; /* Light gray text color */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+    
+  }
+  
+  .change-char:hover {
+    background-color: #555; /* Darker background color on hover */
+  }
+  
+  .change-char:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Shadow on focus */
+  }
+
+  .close-btn {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #ddd;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+/* #description{
+    width: 15%;
+} */
+
+#nakaImage{
+    width: 25%;
+    margin: 10px;
+    /* height: 100%; */
+
+}
+
+#dhiImage{
+    width: 25%;
+    margin: 10px;
+    /* height: 100%; */
+
+}
+
+#ypImage{
+    width: 25%;
+    margin: 10px;
+    /* height: 100%; */
+
+}
+
+.container {
+    display: flex;
+    /* height: 100vh; */
+    /* border: 1px solid white; */
+}
+
+#titleImage{
+    width: 100%;
+    /* height: 100%; */
+}
+
+#controlsImage{
+    width: 100%;
+}
+
+.controls,
+.game {
+  flex: 1; /* Equal width for both panes */
+  /* box-sizing: border-box; */
+  /* border: 1px solid white; */
+}
+
+.controls {
+    flex: 1;
+    border: 1px solid #444; /* Dark gray border */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #000; /* Black background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    color: white; /* Text color */
+  }
+
+.game{
+    flex: 3;
+
+}
+
+#board{
+    /* background-color: skyblue; */
+    /*set board to centre of screen*/
+    margin: 30px auto;
+    background-image: url("flappybirdbg.png");
+}
