@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.8">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="flappybird.css">
+    <script src="flappybird.js"></script>
+</head>
+<body>
+    <!-- <audio id="jumpSound" src="jump2.mp3"></audio>
+    <audio id="overSound" src="game_over.mp3"></audio> -->
+    <audio id="glueSound" src="glue_song.mp3"></audio>
+    <audio id="scoreSound" src="score.mp3"></audio>
+
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <h2>Flappy Naka Game Rules:</h2>
+            <p>Instructions:</p>
+            <ul>
+              <li>Press the Space Bar to make Naka fly upwards.</li>
+              <li>Avoid hitting the pipes.</li>
+            </ul>
+            <p>Enjoy the game!</p>
+          <!-- Add rules or instructions about your game -->
+    
+          <!-- Button to close the modal -->
+          <span class="close-btn" onclick="closeModal()">Next</span>
+        </div>
+      </div>
+
+      <div id="characterModal">
+        <div id="character-naka" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Naka</h3>
+                    <img src="face.png" id="nakaImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Can sleep 11 hours</li>
+                        <li>No driving license</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="showNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="closeCharacterModal()">Start Game</span>
+                </div>
+            </div>
+          </div>
+          <div id="character-dhiren" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Dhiren</h3>
+                    <img src="dhi.png" id="dhiImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Likes indoor guys</li>
+                        <li>Filipino uncle</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="showNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="closeCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+        <div id="character-yp" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Yee Perng</h3>
+                    <img src="yp.png" id="ypImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Lazy</li>
+                        <li>Doesnt do work</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="showNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="closeCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+        <div id="character-amy" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Amirul</h3>
+                    <img src="amy.png" id="ypImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Complains alot</li>
+                        <li>Loves pork</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="showNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="closeCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+        <div id="character-june" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>June</h3>
+                    <img src="june.png" id="ypImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Likes alcohol</li>
+                        <li>Always injure people</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="showNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="closeCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Change character model -->
+      <div id="changeCharacterModal">
+        <div id="change-naka" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Naka</h3>
+                    <img src="face.png" id="nakaImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Can sleep 11 hours</li>
+                        <li>No driving license</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="changeShowNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="changeCloseCharacterModal()">Start Game</span>
+                </div>
+            </div>
+          </div>
+          <div id="change-dhiren" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Dhiren</h3>
+                    <img src="dhi.png" id="dhiImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Likes indoor guys</li>
+                        <li>Filipino uncle</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="changeShowNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="changeCloseCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+        <div id="change-yp" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Yee Perng</h3>
+                    <img src="yp.png" id="ypImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Lazy</li>
+                        <li>Doesnt do work</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="changeShowNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="changeCloseCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+        <div id="change-amy" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>Amirul</h3>
+                    <img src="amy.png" id="ypImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Complains alot</li>
+                        <li>Loves pork</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="changeShowNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="changeCloseCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+        <div id="change-june" class="modal">
+            <div class="modal-content">
+                <h2>Choose Your Character:</h2>
+                <div id="description">
+                    <h3>June</h3>
+                    <img src="june.png" id="ypImage" onclick="chooseNaka()">
+                    <h3>Strengths:</h3>
+                    <ul>
+                        <li>Likes alcohol</li>
+                        <li>Always injure people</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="next-char-btn" onclick="changeShowNextCharacter()">Next Character</button>
+                    <span class="close-btn" onclick="changeCloseCharacterModal()">Start Game</span>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    <div class = "container">
+        <div class="controls">
+            <img src="Title.gif" id="titleImage">
+            <img src="controls.png" id="controlsImage">
+            <img src="naka_gif.gif" id="charGif">
+            <!-- Change character button-->
+            <button class="change-char" onclick="openCharacterModal()">Change Character</button>
+            
+          </div>
+          <div class="game">
+            <canvas id="board"></canvas>
+            <!-- <button class="start-btn" onclick="startGame()">Start Game</button> -->
+        </div>
+    </div>
+</body>
+</html>
